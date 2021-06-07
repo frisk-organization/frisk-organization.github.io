@@ -264,5 +264,22 @@
       "question": "explain that we do not persist images and VM changes. we only store the files inside /root",
       "answer": "we still don't know the answer to this question :("
     }
+  },
+  "dashboard": {
+    "title": "FRISK!",
+    "subtitle": "is a tool for prototyping and sharing server-side projects compatible with Docker technology! FRISK is an on-going project. Hence, there might be interesting features that have not yet been implemented, or even unexpected behavior.",
+    "topProjects": "Top Repositories",
+    "recentIssues": "Most recent issues",
+    "seeProjects": "see all repositories",
+    "seeGithub": "open on Github",
+    "seeIssues": "see issues",
+    "openSession": "open the session",
+    "languages": "languages:",
+    "addProject": "Add new repository",
+    "tags": {
+      "OB": "observed behavior",
+      "EB": "expected behavior",
+      "S2R": "steps to reproduce"
+    }
   }
 }

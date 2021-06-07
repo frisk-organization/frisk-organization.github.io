@@ -6,11 +6,11 @@ import {
   Col,
   Row,
   Input,
+  Space,
   Divider,
   Collapse,
   Pagination,
-  Typography,
-  Space
+  Typography
 } from 'antd'
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons'
 

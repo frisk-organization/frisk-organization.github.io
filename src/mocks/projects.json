@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "facebook/react",
+    "description": "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
+    "link": "https://github.com/facebook/react",
+    "stars": 169000,
+    "tags": ["react", "javascript", "library", "ui", "frontend", "declarative"],
+    "languages": ["JavaScript", "HTML", "CSS", "C++", "TypeScript"]
+  }, {
+    "id": 2,
+    "name": "vuejs/vue",
+    "description": "🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.",
+    "link": "https://github.com/vuejs/vue",
+    "stars": 184000,
+    "tags": ["javascript", "framework", "vue", "frontend"],
+    "languages": ["JavaScript"]
+  }, {
+    "id": 3,
+    "name": "tensorflow/tensorflow",
+    "description": "An Open Source Machine Learning Framework for Everyone",
+    "link": "https://github.com/tensorflow/tensorflow",
+    "stars": 156000,
+    "tags": ["python", "machine-learning", "deep-neural-networks", "deep-learning", "neural-network", "tensorflow", "ml", "distributed"],
+    "languages": ["C++", "Phyton", "MLIR", "Starlark", "HTML", "Go"]
+  }, {
+    "id": 4,
+    "name": "flutter/flutter",
+    "description": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond.",
+    "link": "https://github.com/flutter/flutter",
+    "stars": 122000,
+    "tags": ["android", "windows", "macos", "dart", "ios", "mobile", "web", "material-design"],
+    "languages": ["Dart", "Objective-C", "Java", "C++", "Shell", "CMake"]
+  }, {
+    "id": 5,
+    "name": "facebook/react-native",
+    "description": "A framework for building native apps with React.",
+    "link": "https://github.com/facebook/react-native",
+    "stars": 96000,
+    "tags": [],
+    "languages": ["JavaScript", "Java", "C++", "Objective-C", "Objective-C++", "Starlark"]
+  }, {
+    "id": 6,
+    "name": "nodejs/node",
+    "description": "Node.js JavaScript runtime ✨🐢🚀✨",
+    "link": "https://github.com/nodejs/node",
+    "stars": 79700,
+    "tags": ["nodejs", "javascript", "windows", "macos", "linux", "node", "mit", "js", "runtime"],
+    "languages": ["JavaScript", "C++", "Python", "C", "HTML", "Makefile"]
+  }
+]

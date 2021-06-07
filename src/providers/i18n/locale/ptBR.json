@@ -264,5 +264,22 @@
       "question": "explique que não persistimos imagens e alterações de VM. nós apenas armazenamos os arquivos dentro de /root",
       "answer": "ainda não sabemos a resposta pra esta pergunta :("
     }
+  },
+  "dashboard": {
+    "title": "FRISK!",
+    "subtitle": "é uma ferramenta para prototipagem e compartilhamento de projetos do lado do servidor compatíveis com a tecnologia Docker! FRISK é um projeto em andamento. Portanto, pode haver recursos interessantes que ainda não foram implementados, ou até mesmo um comportamento inesperado.",
+    "topProjects": "Top Repositórios",
+    "recentIssues": "Issues mais recentes",
+    "seeProjects": "ver todos os repositórios",
+    "seeGithub": "abrir no Github",
+    "seeIssues": "ver issues",
+    "openSession": "entrar na sessão",
+    "languages": "linguagens:",
+    "addProject": "Adicionar novo repositório",
+    "tags": {
+      "OB": "comportamento observado",
+      "EB": "comportamento esperado",
+      "S2R": "passos para reprodução"
+    }
   }
 }
