@@ -1,0 +1,268 @@
+{
+  "project": {
+    "name": "FRISK",
+    "language": "ptBR"
+  },
+  "languages": {
+    "ptBR": {
+      "language": "Português",
+      "country": "Brasil"
+    },
+    "enUS": {
+      "language": "Inglês",
+      "country": "Estados Unidos"
+    }
+  },
+  "links": {
+    "faq": "FAQ",
+    "tutorial": "Tutorial",
+    "dashboard": "Dashboard",
+    "error404": "Página não encontrada"
+  },
+  "erros": {
+    "404": {
+      "title": "Página não encontrada!",
+      "description": "A página que você procura não foi encontrada :(",
+      "extra": "Sugerimos que volte à tela principal",
+      "back": "Voltar ao início"
+    }
+  },
+  "tutorial": {
+    "anchor": {
+      "intro": "Introdução",
+      "background": "Contexto",
+      "task1": "Pré-requisitos",
+      "task2": "Criar sessão",
+      "task3": "Modificar website",
+      "task4": "Criar imagem docker",
+      "task5": "Gerar container docker",
+      "task6": "Compartilhar sessão",
+      "task7": "Fechar sessão",
+      "task8": "Executar sessão"
+    },
+    "intro": {
+      "title": "Usando FRISK para criar uma amostra baseada em uma estrutura da web do lado do servidor",
+      "date": "15, Dez - 2018",
+      "subtitle": "Este tutorial mostra como usar o FRISK para criar e implantar um aplicativo Express.js minimalista e compartilhar seu trabalho com alguém. Um método muito semelhante pode ser usado para prototipar aplicativos para outras estruturas."
+    },
+    "background": {
+      "description": "Contexto. É importante que o leitor compreenda os seguintes conceitos antes de continuar.",
+      "session": {
+        "title": "(FRISK) Sessão:",
+        "content": "O período de 2h em que um desenvolvedor pode interagir com o FRISK. As sessões são anônimas, o que significa que você não tem uma conta para salvar seu trabalho, mas observe que você pode continuar e compartilhar seu trabalho pressionando o ícone de compartilhamento. Ao acessar esse link, o FRISK cria uma nova sessão com base no conteúdo armazenado na sessão original."
+      },
+      "virtualMachine": {
+        "title": "(FRISK) Máquina Virtual (VM)",
+        "content": "Uma máquina que ficará hospedada em nossos servidores. Você pode criar quantas VMs forem necessárias para o período de uma sessão. Isso deve ser importante ao trabalhar com microsserviços."
+      },
+      "docker": {
+        "title": "(Docker) Imagem:",
+        "content1": "Um arquivo que encapsula o sistema operacional que será usado para executar seu exemplo. Este arquivo não está visível para você (ele é armazenado no registro do Docker). Docker usa o arquivo",
+        "code1": "Dockerfile",
+        "content2": "--este visível para o usuário-- para criar uma imagem. Pode-se encontrar as imagens disponíveis em uma máquina virtual usando o comando",
+        "code2": "$> docker ps -a",
+        "end": "."
+      },
+      "container": {
+        "title": "(Docker) Container",
+        "content1": "Conceitualmente, um contêiner é uma imagem em execução; é chamado assim porque isola um ambiente de execução de outros contêineres. É possível encontrar todos os contêineres disponíveis em uma máquina virtual usando o comando",
+        "code1": "$> docker ps -a",
+        "end": "."
+      },
+      "card": {
+        "title": "(FRISK) Card:",
+        "content1": "Um card é uma abstração FRISK para inicializar uma sessão FRISK. Um desenvolvedor pode usar um card para iniciar uma sessão com artefatos de codificação para acelerar a prototipagem. Esses artefatos incluem um",
+        "code1": "Dockerfile",
+        "content2": "e código clichê associado à finalidade do card."
+      }
+    },
+    "task1": {
+      "title": "Tarefa 1: Verifique os pré-requisitos",
+      "content": "Você precisará de um navegador moderno para concluir este tutorial. Explicaremos as partes do código Express.js abordadas e os comandos Docker discutidos ao longo do caminho, portanto, não é necessário conhecimento prévio sobre eles."
+    },
+    "task2": {
+      "title": "Tarefa 2: Crie uma sessão",
+      "content1": "Selecione o cartão Express.js na página inicial.",
+      "content2": "Esta seleção tem os seguintes efeitos:",
+      "option1": "ele cria uma sessão FRISK com uma máquina virtual nela",
+      "option2": {
+        "content1": "adiciona um",
+        "code1": "Dockerfile",
+        "content2": "para Express.js (",
+        "strong1": "not",
+        "content3": "criar imagem ou container)"
+      },
+      "option3": "adiciona código clichê --index.js-- para um serviço da web"
+    },
+    "task3": {
+      "title": "Tarefa 3: Modifique o site",
+      "content1": "Antes de continuar, certifique-se de que você está no diretório",
+      "code1": "/root",
+      "content2": "digitando",
+      "code2": "pwd",
+      "content3": "no shell. Este é o diretório base para fazer mudanças em seu ambiente. Depois disso, clique no botão \"Editor\". Você pode fazer alterações nos arquivos usando o editor de arquivos que aparecerá. Alternativamente, você pode usar",
+      "code3": "vim",
+      "content4": "no shell, se você preferir.",
+      "content5": "Após essas verificações, modifique o arquivo",
+      "code4": "/root/index.js",
+      "content6": "(mostrado abaixo) para imprimir uma saída diferente. Este arquivo contém o código Express.js (uma sublinguagem do Node.js) para responder a uma solicitação HTTP para a base URL do seu aplicativo (veja a string",
+      "code5": "'/'",
+      "content7": "na linha 4). Modifique a string",
+      "code6": "\"Hello world!\"",
+      "content8": "do jeito que quiser. Observe que a string é passada para a função",
+      "code7": "send",
+      "content9": "do objeto",
+      "code8": "res",
+      "content10": ", que denota a resposta a uma solicitação HTTP.",
+      "lines1": "1: var express = require('express');",
+      "lines2": "2: var app = express();",
+      "lines3": "3:",
+      "lines4": "4: app.get('/', function(req, res) {",
+      "lines5": "5:     res.send(\"Hello world!\"); // <-- here",
+      "lines6": "6: });",
+      "lines7": "7:",
+      "lines8": "8: app.listen(8080);"
+    },
+    "task4": {
+      "title": "Tarefa 4: Crie a imagem Docker",
+      "content1": "Se você não se lembra da definição de uma imagem Docker, verifique as definições no início deste tutorial.",
+      "content2": "Exibir o conteúdo do Dockerfile.",
+      "code1": "$> cat Dockerfile",
+      "lines1": "FROM node:6.9.5",
+      "lines2": "WORKDIR /app",
+      "lines3": "RUN npm install --save express",
+      "lines4": "COPY . /app",
+      "lines5": "EXPOSE 8080",
+      "lines6": "CMD node index.js",
+      "content3": "Vamos ver o que cada um desses comandos faz.",
+      "from": {
+        "title": "FROM",
+        "content1": "especifica a imagem de base da nova imagem que você está criando (sim, as imagens são em camadas). Para este exemplo, a imagem base é",
+        "code1": "node:6.9.5",
+        "content2": ", que se baseia em alguma distribuição Linux."
+      },
+      "run": {
+        "title": "RUN",
+        "content": "executa o comando correspondente em uma nova camada sobre a imagem atual. A imagem resultante será usada nos seguintes comandos do Dockerfile."
+      },
+      "workdir": {
+        "title": "WORKDIR",
+        "content": "define o diretório de trabalho que é usado por outros comandos do Docker."
+      },
+      "copy": {
+        "title": "COPY",
+        "content1": "copia arquivos do host (neste caso, uma máquina virtual do FRISK) para a imagem. Neste exemplo, o",
+        "code1": "COPY",
+        "content2": "comando é usado para copiar o conteúdo do diretório",
+        "code2": "/root",
+        "content3": "(no host) para o diretório",
+        "code3": "app",
+        "content4": "(na imagem)."
+      },
+      "expose": {
+        "title": "EXPOSE",
+        "content": "define qual(is) porta(s) o aplicativo usa."
+      },
+      "cmd": {
+        "title": "CMD",
+        "content": "especifica qual comando executar quando um contêiner é iniciado a partir da imagem."
+      },
+      "content4": "Use o seguinte comando para criar a imagem.",
+      "code2": "$> docker image build --tag expressapp:1.0 .",
+      "the": "A opção",
+      "code3": "--tag",
+      "content6": "especifica um nome personalizado para referência posterior.",
+      "code4": ".",
+      "content7": "no final do comando diz ao Docker para usar o diretório atual para procurar o arquivo",
+      "code5": "Dockerfile",
+      "content8": "A execução deste comando gera uma boa quantidade de saída na tela (verifique se sua saída corresponde à nossa). Para resumir, este comando baixa todas as imagens dependentes, cria a imagem",
+      "express": "expressapp:1.0",
+      "content9": "com base nessas peças e os armazena no registro do Docker.",
+      "strong1": "Não",
+      "content10": "faz criação de contêineres. Verifique se a imagem",
+      "content11": "está disponível no registro com o comando",
+      "code6": "$> docker images",
+      "end": "."
+    },
+    "task5": {
+      "title": "Tarefa 5: Crie o contêiner do Docker",
+      "content1": "Use o seguinte comando para iniciar um novo contêiner a partir da imagem que você criou.",
+      "code1": "$> docker run --publish 8080:8080 --name expressapp expressapp:1.0",
+      "content2": "Lembre-se de que o comando",
+      "code2": "CMD",
+      "content3": "(do Dockerfile) é responsável por executar o servidor da web Express.js no contêiner. Como este contêiner estará executando um servidor da web Express.JS, precisamos conectar as portas na VM e no contêiner. A opção",
+      "code3": "--publish host_port:container_port",
+      "content4": "faz isso. Ele permite que o tráfego para o host (VM) seja encaminhado para o contêiner, que está executando seu serviço.",
+      "content5": "Neste ponto, seu contêiner deve estar instalado e funcionando. Você pode verificar isso de duas maneiras.",
+      "content6": "Copie o comando ssh no topo da página e cole em um terminal (qualquer máquina) e digite",
+      "code4": "top",
+      "content7": ". Você deve ser capaz de ver a referência ao nome",
+      "code5": "expressapp",
+      "content8": ". Este é o processo de contêiner.",
+      "content9": "Clique no link",
+      "strong1": "8080",
+      "content10": "que deveria ter aparecido na parte superior da tela da sessão quando o contêiner começou a ser executado. Seu navegador deve abrir uma nova guia para esse URL e você deve ver a mensagem que definiu no arquivo",
+      "code6": "index.js",
+      "end": "." 
+    },
+    "task6": {
+      "title": "Tarefa 6: Compartilhe (uma cópia de) sua sessão",
+      "content": "Existem duas maneiras diferentes de compartilhar o trabalho no FRISK. A primeira alternativa fornece acesso à mesma sessão via SSH; a segunda alternativa cria uma cópia da sessão. A primeira alternativa é útil, por exemplo, para pedir ajuda a um colega para resolver um problema em sua configuração, enquanto a segunda alternativa é útil para compartilhar seu trabalho com estranhos. Vamos nos concentrar na segunda alternativa.",
+      "step1": "Identifique o botão do ícone de compartilhamento que aparece na parte superior da tela.",
+      "step2": "Clique nesse botão, o FRISK mostrará um URL associado à sua sessão.",
+      "step3": {
+        "content1": "Copie e cole esse URL no navegador (pode ser um navegador diferente sendo executado em uma máquina diferente). Um clique nesse link resultará na criação de uma nova sessão com base no conteúdo da sessão original. As sessões são diferentes! Uma mudança em uma sessão",
+        "strong1": "não",
+        "content2": "é visível na outra sessão. Se você quiser compartilhar uma sessão em execução (sem copiá-la), use o botão SSH"
+      },
+      "step4": {
+        "content1": "Faça uma mudança diferente na mensagem da string no arquivo",
+        "code1": "index.js",
+        "content2": "e repita os comandos neste tutorial para confirmar se ambos os serviços estão em execução e respondem com strings diferentes."
+      }
+    },
+    "task7": {
+      "title": "Tarefa 7: Feche sua(s) sessão(ões)",
+      "content": "Remova a VM da sua sessão e, em seguida, feche a sessão. O tempo máximo de uma sessão é de 2h, mas é uma boa prática economizar tempo e espaço. Você pode continuar seu trabalho a qualquer momento se mantiver o URL de sua sessão."
+    },
+    "task8": {
+      "title": "Tarefa 8: Como executar sua(s) sessão(ões)",
+      "content1": "Para executar um",
+      "card": "Card",
+      "content2": " já criado, você precisa clicar no botão",
+      "build": "BUILD",
+      "content3": ".",
+      "content4": "Se o",
+      "content5": "está usando um banco de dados, é necessário usar o commando",
+      "italic1": "docker-compose",
+      "content6": ". Este comando é necessário porque há mais de um serviço em execução no mesmo",
+      "italic2": "Docker",
+      "content7": "em portas diferentes. Nesses casos, em vez de clicar no botão",
+      "content8": ", você deve clicar no botão",
+      "strong1": "BUILD DOCKER COMPOSE",
+      "content9": ", qual vai executar o comando no console fornecido:",
+      "code1": "docker-compose up"
+    }
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "subtitle": "Possue algum dúvida sobre o funcionamento da plataforma? Pesquise aqui",
+    "placeholder": "Digite sua dúvida aqui",
+    "0": {
+      "question": "explique como obtivemos esses modelos",
+      "answer": "ainda não sabemos a resposta pra esta pergunta :("
+    },
+    "1": {
+      "question": "explique como funciona",
+      "answer": "ainda não sabemos a resposta pra esta pergunta :("
+    },
+    "2": {
+      "question": "explicar que usamos alpine-linux e não linux baseado em debian",
+      "answer": "ainda não sabemos a resposta pra esta pergunta :("
+    },
+    "3": {
+      "question": "explique que não persistimos imagens e alterações de VM. nós apenas armazenamos os arquivos dentro de /root",
+      "answer": "ainda não sabemos a resposta pra esta pergunta :("
+    }
+  }
+}
