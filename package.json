@@ -2,7 +2,7 @@
   "name": "frisk",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://frisk-organization.github.io/frontend/",
+  "homepage": "https://frisk-organization.github.io/",
   "root": "build/",
   "routes": {
     "/**": "index.html"
