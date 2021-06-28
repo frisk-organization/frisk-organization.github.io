@@ -2,6 +2,11 @@
   "name": "frisk",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://frisk-organization.github.io/frontend/",
+  "root": "build/",
+  "routes": {
+    "/**": "index.html"
+  },
   "dependencies": {
     "@ant-design/colors": "^6.0.0",
     "@ant-design/icons": "^4.6.2",
