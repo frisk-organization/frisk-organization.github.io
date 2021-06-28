@@ -15,16 +15,24 @@
   },
   "links": {
     "faq": "FAQ",
+    "projects": "Repositories",
     "tutorial": "Tutorial",
     "dashboard": "Dashboard",
-    "error404": "Page not found"
+    "error404": "Page not found",
+    "error500": "Error found"
   },
-  "erros": {
+  "errors": {
     "404": {
       "title": "Page not found!",
       "description": "The page you looking for isn't found :(",
       "extra": "We suggest you back to home",
       "back": "Back to home"
+    },
+    "500": {
+      "title": "Error found!",
+      "description": "Something went wrong that we didn't expected.",
+      "extra": "We suggest that you come back and verify what's wrong happened.",
+      "back": "Go Back"
     }
   },
   "tutorial": {
@@ -263,6 +271,26 @@
     "3": {
       "question": "explain that we do not persist images and VM changes. we only store the files inside /root",
       "answer": "we still don't know the answer to this question :("
+    }
+  },
+  "projects": {
+    "title": "Repositories",
+    "subtitle": "All projects here are linked to a repository on Github, here you can view their information and open the repository session in question.",
+    "seeGithub": "open on Github",
+    "seeIssues": "see issues",
+    "openSession": "open the session",
+    "languages": "languages:",
+    "noProject": {
+      "title": "Repository not found!",
+      "button": "Back to projects",
+      "description": "Something went wrong that we didn't expected.",
+      "extra": "The wanted repository is not available anymore, please, come back and verify the search!"
+    },
+    "issues": "Issues",
+    "tags": {
+      "OB": "observed behavior",
+      "EB": "expected behavior",
+      "S2R": "steps to reproduce"
     }
   },
   "dashboard": {

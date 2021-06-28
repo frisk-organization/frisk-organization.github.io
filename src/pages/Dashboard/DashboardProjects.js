@@ -10,7 +10,6 @@ import {
   GithubOutlined,
   SelectOutlined,
   AppstoreOutlined,
-  PlusCircleOutlined,
   FundProjectionScreenOutlined
 } from '@ant-design/icons'
 
@@ -48,7 +47,11 @@ export const DashboardProjects = ({ ...props }) => {
 
       <Divider style={{ marginTop: 0 }} />
 
-      {isLoading && <Loading style={{ margin: '20px auto' }} />}
+      {isLoading && (
+        <Row style={{ width: '100%' }}>
+          <Loading style={{ margin: '20px auto' }} />
+        </Row>
+      )}
 
       {!isLoading && (
         <Row style={{ width: '100%' }} gutter={[16, 16]}>
@@ -135,31 +138,6 @@ export const DashboardProjects = ({ ...props }) => {
               </Card>
             </Col>
           ))}
-
-          <Col xs={24} sm={12} md={8} lg={6}>
-            <Link to='/projects/new'>
-              <Card
-                style={{
-                  height: '100%',
-                  display: 'flex',
-                  cursor: 'pointer',
-                  flexDirection: 'column'
-                }}
-                bodyStyle={{ padding: '12px 16px', flex: 1 }}
-              >
-                <Row
-                  align='middle'
-                  justify='center'
-                  style={{ flexDirection: 'column', height: '100%' }}
-                >
-                  <PlusCircleOutlined style={{ fontSize: 28 }} />
-                  <Text style={{ marginTop: 10 }}>
-                    {translate('addProject')}
-                  </Text>
-                </Row>
-              </Card>
-            </Link>
-          </Col>
         </Row>
       )}
     </Row>

@@ -15,16 +15,24 @@
   },
   "links": {
     "faq": "FAQ",
+    "projects": "Repositórios",
     "tutorial": "Tutorial",
     "dashboard": "Dashboard",
-    "error404": "Página não encontrada"
+    "error404": "Página não encontrada",
+    "error500": "Erro encontrado"
   },
-  "erros": {
+  "errors": {
     "404": {
       "title": "Página não encontrada!",
       "description": "A página que você procura não foi encontrada :(",
       "extra": "Sugerimos que volte à tela principal",
       "back": "Voltar ao início"
+    },
+    "500": {
+      "title": "Error encontrado!",
+      "description": "Aconteceu algo que não esperavamos.",
+      "extra": "Sugerimos que volte e verifique o que aconteceu de errado.",
+      "back": "Voltar"
     }
   },
   "tutorial": {
@@ -246,7 +254,7 @@
   },
   "faq": {
     "title": "Perguntas Frequentes",
-    "subtitle": "Possue algum dúvida sobre o funcionamento da plataforma? Pesquise aqui",
+    "subtitle": "Possui algum dúvida sobre o funcionamento da plataforma? Pesquise aqui",
     "placeholder": "Digite sua dúvida aqui",
     "0": {
       "question": "explique como obtivemos esses modelos",
@@ -263,6 +271,26 @@
     "3": {
       "question": "explique que não persistimos imagens e alterações de VM. nós apenas armazenamos os arquivos dentro de /root",
       "answer": "ainda não sabemos a resposta pra esta pergunta :("
+    }
+  },
+  "projects": {
+    "title": "Repositórios",
+    "subtitle": "Todos os projetos aqui estão ligados a um repositório no Github, aqui será possível visualizar suas informações e abrir a sessão do repositório em questão.",
+    "seeGithub": "abrir no Github",
+    "seeIssues": "ver issues",
+    "openSession": "entrar na sessão",
+    "languages": "linguagens:",
+    "noProject": {
+      "title": "Repositório não encontrado!",
+      "description": "Aconteceu algo que não esperavamos!",
+      "button": "Voltar para projetos",
+      "extra": "O repositório procurado não está disponível no momento, por favor, volte e verifique a pesquisa!"
+    },
+    "issues": "Issues",
+    "tags": {
+      "OB": "comportamento observado",
+      "EB": "comportamento esperado",
+      "S2R": "passos para reprodução"
     }
   },
   "dashboard": {

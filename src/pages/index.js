@@ -17,6 +17,7 @@ import { setPageTitle } from 'utils/control'
 const FAQ = lazy(() => import('./FAQ'))
 const Error404 = lazy(() => import('./Error404'))
 const Tutorial = lazy(() => import('./Tutorial'))
+const Projects = lazy(() => import('./Projects'))
 const Dashboard = lazy(() => import('./Dashboard'))
 
 const Routes = memo(() => {
@@ -60,6 +61,11 @@ const Routes = memo(() => {
           exact
           path='/tutorial'
           render={props => renderPage('tutorial', props, Tutorial)}
+        />
+
+        <Route
+          path='/projects'
+          render={props => renderPage('projects', props, Projects)}
         />
 
         <Route

@@ -41,6 +41,10 @@ export const Footer = () => {
             <Col>
               <Link to='/tutorial'>{translate('tutorial')}</Link>
             </Col>
+
+            <Col>
+              <Link to='/projects'>{translate('projects')}</Link>
+            </Col>
           </Row>
         </Col>
       </Row>

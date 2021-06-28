@@ -37,7 +37,11 @@ export const DashboardIssues = ({ ...props }) => {
 
       <Divider style={{ marginTop: 0 }} />
 
-      {isLoading && <Loading style={{ margin: '20px auto' }} />}
+      {isLoading && (
+        <Row style={{ width: '100%' }}>
+          <Loading style={{ margin: '20px auto' }} />
+        </Row>
+      )}
 
       {!isLoading && (
         <Row style={{ width: '100%' }}>

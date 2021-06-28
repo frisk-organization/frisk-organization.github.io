@@ -12,7 +12,7 @@ export const Error404 = () => {
   const [t] = useTranslation()
 
   const translate = useCallback(
-    (key, options) => t(`erros:404:${key}`, options),
+    (key, options) => t(`errors:404:${key}`, options),
     [t]
   )
 

@@ -52,6 +52,10 @@ export const Header = () => {
       </Row>
 
       <Menu mode='horizontal' selectedKeys={[key]}>
+        <Menu.Item key='projects'>
+          <Link to='/projects'>{translate('projects')}</Link>
+        </Menu.Item>
+
         <Menu.Item key='faq'>
           <Link to='/faq'>{translate('faq')}</Link>
         </Menu.Item>
